@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #6441a5, #2a0845);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    /* background-color: #fff; */
+    width: 100%;
+    margin: 5rem 0;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    transition: all .6s ease-in-out;
+}
+
+h1:hover {
+    background-color: white;
+    color:#6441a5
+}
+
+.container {
+    background-color: white;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px 3px rgb(78, 77, 77);
+}
+
+#new-task-form {
+    display: flex;
+    width: 29rem;
+    justify-content: space-around;
+    height: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+#new-task-input {
+    width: 100%;
+    padding: .5rem;
+    margin-right: 1rem;
+    outline: 1px solid rgb(224, 224, 224);
+    background-color: rgba(232, 230, 230, 0.452);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#new-task-input:focus {
+    outline: 1px solid #6441a5;
+}
+
+button {
+    padding: 0 1.3rem;
+    background-color: #6441a5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+    background-color: rgb(70, 13, 117);
+}
+
+button:active {
+    background-color: #2a0845;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.content input {
+    width: 29rem;
+    padding: .6rem 8.5rem .6rem .6rem;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(202, 199, 199, 0.386);
+    margin-top: .5rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+.actions {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 13.5px;
+    background-color: rgba(143, 139, 139, 0.5);
+}
+
+.actions button {
+    border: none;
+    margin-right: .7rem;
+    padding: .4rem .6rem;
+    font-size: .8rem;
+    letter-spacing: 1.5px;
+}
+
+.actions button.delete:hover {
+    background-color: rgba(217, 23, 23, 0.77);
+}
+
+.actions button.delete:active {
+    background-color: rgb(200, 8, 8);
+}
