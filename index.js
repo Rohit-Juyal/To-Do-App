@@ -3,7 +3,6 @@ window.addEventListener("load", () => {
     const input = document.getElementById("new-task-input");
     const list_el = document.getElementById("tasks");
 
-
     function addnote(task) {
         
         
@@ -25,6 +24,10 @@ window.addEventListener("load", () => {
 
         task_content_el.appendChild(task_input_el);
 
+        task_input_el.addEventListener("click", () => {
+            task_input_el.classList.toggle("completed");
+        })
+
         const task_actions_el = document.createElement("div");
         task_actions_el.classList.add("actions");
 
@@ -43,6 +46,10 @@ window.addEventListener("load", () => {
         task_el.appendChild(task_actions_el);
 
         list_el.appendChild(task_el);
+
+        
+
+
         
         let index = -1
 
