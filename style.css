@@ -133,3 +133,8 @@ button:active {
 .actions button.delete:active {
     background-color: rgb(200, 8, 8);
 }
+
+#tasks .task input.completed {
+    text-decoration: line-through;
+    color: rgb(100, 98, 98);
+}
