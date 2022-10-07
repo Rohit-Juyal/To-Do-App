@@ -4,14 +4,11 @@ window.addEventListener("load", () => {
     const list_el = document.getElementById("tasks");
 
     function addnote(task) {
-        
-        
         const task_el = document.createElement("div");
         task_el.classList.add("task");
 
         task_content_el = document.createElement("div");
         task_content_el.classList.add("content");
-
 
         task_el.appendChild(task_content_el);
 
@@ -47,17 +44,13 @@ window.addEventListener("load", () => {
 
         list_el.appendChild(task_el);
 
-        
-
-
-        
         let index = -1
 
         task_edit_el.addEventListener("click", () => {
             if (task_edit_el.innerHTML == "Edit") {
                 task_input_el.removeAttribute("readonly");
                 task_input_el.focus();
-                task_input_el.style.outline ="1px solid rgb(70, 13, 117)"
+                task_input_el.style.outline = "1px solid rgb(70, 13, 117)"
                 task_edit_el.innerHTML = "Save";
                 index = savedTasks.indexOf(task_input_el.value);
 
@@ -66,12 +59,9 @@ window.addEventListener("load", () => {
 
                 task_input_el.setAttribute("readonly", "readonly");
                 task_edit_el.innerHTML = "Edit";
-                task_input_el.style.outline ="none";
+                task_input_el.style.outline = "none";
                 savedTasks[index] = task_input_el.value;
-
                 localStorage.setItem("tasks", JSON.stringify(savedTasks));
-
-
             }
         })
 
@@ -81,8 +71,7 @@ window.addEventListener("load", () => {
 
             localStorage.setItem("tasks", JSON.stringify(savedTasks))
         });
-
-    } 
+    }
 
     let savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     savedTasks.forEach(addnote);
@@ -99,11 +88,6 @@ window.addEventListener("load", () => {
             addnote(task);
         }
     });
-
-
-    
-
-
 });
 
 
@@ -112,11 +96,11 @@ window.addEventListener("load", () => {
 
 
 
-        
 
-        
 
-        
+
+
+
 
 
 
